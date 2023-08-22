@@ -39,6 +39,7 @@ public class CuentaServicio {
         }
     }
 
+    @Transactional
     public List<Cuenta> obtenerCuentas(){
         return cuentaRepositorio.findAll();
     }

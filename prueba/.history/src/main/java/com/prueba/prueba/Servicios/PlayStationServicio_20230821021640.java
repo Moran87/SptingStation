@@ -47,8 +47,4 @@ public class PlayStationServicio {
     public List<PlayStationDTO> obtenerDTO(){
         return playStationRepositorio.DTOPlay();
     }
-
-    public Long numeroPlays(){
-        return playStationRepositorio.numeroPlays();
-    }
 }

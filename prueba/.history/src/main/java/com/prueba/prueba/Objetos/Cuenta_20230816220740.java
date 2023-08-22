@@ -8,7 +8,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,10 +30,5 @@ public class Cuenta {
     
     @Column(nullable = true, unique = true)
     @ManyToMany(mappedBy = "cuenta")
-    @JsonIgnore
     Set<PlayStation> playStation;
-
-    @OneToOne(mappedBy = "cuenta")
-    @JsonIgnore
-    private PlayStationPlus psPlus;
 }

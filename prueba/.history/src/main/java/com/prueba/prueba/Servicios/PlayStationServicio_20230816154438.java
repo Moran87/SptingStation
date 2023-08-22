@@ -5,11 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.prueba.prueba.DTO.PlayStationDTO;
 import com.prueba.prueba.Objetos.PlayStation;
 import com.prueba.prueba.Repositorios.PlayStationRepositorio;
-
-import jakarta.transaction.Transactional;
 
 @Service
 public class PlayStationServicio {
@@ -43,12 +40,4 @@ public class PlayStationServicio {
         }
     }
 
-    @Transactional
-    public List<PlayStationDTO> obtenerDTO(){
-        return playStationRepositorio.DTOPlay();
-    }
-
-    public Long numeroPlays(){
-        return playStationRepositorio.numeroPlays();
-    }
 }

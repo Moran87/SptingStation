@@ -13,11 +13,7 @@ import com.prueba.prueba.Objetos.PlayStation;
 @Repository
 public interface PlayStationRepositorio extends JpaRepository<PlayStation, String>{
  
-    @Query("SELECT new com.prueba.prueba.DTO.PlayStationDTO(u.noSerie, u.nombre) FROM PlayStation u")
-    List<PlayStationDTO> DTOPlay();
-
-    @Procedure(name="numeroPlays5")
-    Long numeroPlays();
-
+    @Procedure(name = "DTOPlay5")
+    List<PlayStationDTO> DTOPlay2();
 
 }

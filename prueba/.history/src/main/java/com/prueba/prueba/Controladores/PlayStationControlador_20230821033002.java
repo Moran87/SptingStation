@@ -47,9 +47,4 @@ public class PlayStationControlador {
     public List<PlayStationDTO> obtener(){
         return playStationServicio.obtenerDTO();
     }
-
-    @GetMapping("plays")
-    public Long numeroPlays(){
-        return playStationServicio.numeroPlays();
-    }
 }

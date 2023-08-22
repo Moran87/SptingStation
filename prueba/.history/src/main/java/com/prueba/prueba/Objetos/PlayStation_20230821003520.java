@@ -40,10 +40,8 @@ public class PlayStation {
     @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST}, fetch = FetchType.EAGER)
     @JoinTable(name = "PlayStation_has_Cuenta", joinColumns = @JoinColumn(name="PlayStation_noSerie"),
     inverseJoinColumns = @JoinColumn(name = "Cuenta_nombreUsuario"))
-    @JsonIgnore
     Set<Cuenta>cuenta;
 
     @OneToOne(mappedBy = "playStation")
-    @JsonIgnore
     private PlayStationPlus psPlus;
 }

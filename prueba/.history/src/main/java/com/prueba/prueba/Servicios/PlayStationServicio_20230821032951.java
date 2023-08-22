@@ -48,7 +48,7 @@ public class PlayStationServicio {
         return playStationRepositorio.DTOPlay();
     }
 
-    public Long numeroPlays(){
+    public int numeroPlays(){
         return playStationRepositorio.numeroPlays();
     }
 }

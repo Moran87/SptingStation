@@ -34,7 +34,7 @@ public class Cuenta {
     @JsonIgnore
     Set<PlayStation> playStation;
 
-    @OneToOne(mappedBy = "cuenta")
+    @OneToOne(mappedBy = "playStation")
     @JsonIgnore
-    private PlayStationPlus psPlus;
+    private Cuenta playStation1;
 }

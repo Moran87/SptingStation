@@ -12,7 +12,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -42,8 +41,5 @@ public class PlayStation {
     inverseJoinColumns = @JoinColumn(name = "Cuenta_nombreUsuario"))
     @JsonIgnore
     Set<Cuenta>cuenta;
-
-    @OneToOne(mappedBy = "playStation")
-    @JsonIgnore
-    private PlayStationPlus psPlus;
+    
 }

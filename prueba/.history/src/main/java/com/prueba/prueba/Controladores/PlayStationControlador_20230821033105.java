@@ -49,7 +49,7 @@ public class PlayStationControlador {
     }
 
     @GetMapping("plays")
-    public Long numeroPlays(){
+    public int numeroPlays(){
         return playStationServicio.numeroPlays();
     }
 }

@@ -16,7 +16,7 @@ public interface PlayStationRepositorio extends JpaRepository<PlayStation, Strin
     @Query("SELECT new com.prueba.prueba.DTO.PlayStationDTO(u.noSerie, u.nombre) FROM PlayStation u")
     List<PlayStationDTO> DTOPlay();
 
-    @Procedure(name="numeroPlays5")
+    @Procedure(name="numeroPlays")
     Long numeroPlays();
 
 

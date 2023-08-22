@@ -45,10 +45,6 @@ public class PlayStationServicio {
 
     @Transactional
     public List<PlayStationDTO> obtenerDTO(){
-        return playStationRepositorio.DTOPlay();
-    }
-
-    public Long numeroPlays(){
-        return playStationRepositorio.numeroPlays();
+        return playStationRepositorio.DTOPlay2();
     }
 }

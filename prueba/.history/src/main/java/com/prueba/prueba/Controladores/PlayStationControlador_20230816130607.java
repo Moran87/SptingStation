@@ -6,12 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prueba.prueba.DTO.PlayStationDTO;
 import com.prueba.prueba.Objetos.PlayStation;
 import com.prueba.prueba.Servicios.PlayStationServicio;
 
@@ -33,23 +31,8 @@ public class PlayStationControlador {
     }
 
     @DeleteMapping("/eliminarPlayStation")
-    public void eliminarPlayStation(String noSerie){
+    public void eliminarPlayStation(String nombre){
 
-        playStationServicio.eliminarPlayStation(noSerie);
-    }
-
-    @PutMapping("/modificarPlayStation")
-    public PlayStation modificarPlayStation(@RequestBody PlayStation playStation){
-        return playStationServicio.modificarPlayStation(playStation);
-    }
-
-    @GetMapping("/obtenerDTO")
-    public List<PlayStationDTO> obtener(){
-        return playStationServicio.obtenerDTO();
-    }
-
-    @GetMapping("plays")
-    public Long numeroPlays(){
-        return playStationServicio.numeroPlays();
+        playStationServicio.eliminarPlayStation(nombre);
     }
 }
