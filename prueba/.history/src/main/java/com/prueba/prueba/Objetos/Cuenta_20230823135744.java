@@ -40,6 +40,5 @@ public class Cuenta {
     private PlayStationPlus psPlus;
 
     @OneToMany(mappedBy = "cuenta")
-    @JsonIgnore
     private Set<Partida> partida;
 }
